@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snakes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Snakes</h1>
+        <div class="score-board">Score: <span id="score">0</span></div>
+    </div>
+
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+    <div class="controls">
+        <div class="row">
+            <button id="upBtn" class="ctrl-btn">▲</button>
+        </div>
+        <div class="row">
+            <button id="leftBtn" class="ctrl-btn">◀</button>
+            <button id="downBtn" class="ctrl-btn">▼</button>
+            <button id="rightBtn" class="ctrl-btn">▶</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // PWA Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registered', reg))
+                    .catch(err => console.log('Service Worker registration failed', err));
+            });
+        }
+    </script>
+</body>
+</html>

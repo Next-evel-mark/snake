@@ -1,3 +1,3 @@
 # snake
 
-<i><b>UNDER CONSTRUCTIOM</b></i>
+<i><b>UNDER CONSTRUCTION</b></i>
